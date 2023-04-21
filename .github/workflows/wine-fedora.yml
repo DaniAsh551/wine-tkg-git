@@ -15,6 +15,7 @@ jobs:
       - name: Compilation
         run: |
           sudo dnf -y -q update
+          sudo dnf -y -q install libstdc++-static libstdc++-static.i686 libstdc++-devel libstdc++-devel.i686
           cd wine-tkg-git 
           sed -i 's/distro=""/distro="fedora"/' customization.cfg
           touch tarplz
